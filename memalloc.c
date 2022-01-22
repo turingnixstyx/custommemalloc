@@ -1,3 +1,9 @@
+#include <unistd.h>
+#include <string.h>
+#include <pthread.h>
+#include <stdio.h>
+
+
 typedef char ALIGN[16];
 
 union header {
