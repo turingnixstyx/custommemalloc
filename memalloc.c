@@ -22,6 +22,8 @@ header_t *head, *tail;
 
 pthread_mutex_t global_malloc_lock;
 
+header_t *get_free_block(size_t );
+
 void *malloc(size_t size)
 {
     size_t total_size;
@@ -72,4 +74,6 @@ header_t *get_free_block(size_t size){
             return curr;
         curr = curr->s.next;
     }
+
+    return NULL;
 }
